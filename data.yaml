@@ -1,0 +1,8 @@
+path: .  # root of your dataset
+train: images/train
+val: images/val
+
+kpt_shape: [15, 3]  # 15 keypoints, each with (x, y, visibility)
+
+names:
+  0: person

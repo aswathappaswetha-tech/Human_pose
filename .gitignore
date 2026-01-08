@@ -1,0 +1,26 @@
+# Virtual environments
+.venv/
+venv/
+
+# Python cache and build
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Editor/project metadata
+.vscode/
+.idea/
+.DS_Store
+
+# Environment files
+.env
+
+# Model weights and large outputs
+yolov8n-pose.pt
+predictions/
+keypoints_output.csv
+
+# Misc
+*.log
+*.sqlite3
