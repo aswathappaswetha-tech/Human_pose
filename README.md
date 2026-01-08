@@ -50,7 +50,7 @@ Where outputs are saved
 - Training outputs (example path): `C:/Users/Swetha/runs/pose/pose_human_run*/weights/best.pt`
 - Predictions: `predictions/` in project root
 
-Want help with branch protection or a longer README (badges, contributor guide)? Tell me which and I can set it up.
+
 
 **License**
 
