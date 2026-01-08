@@ -1,58 +1,45 @@
-# pose_human
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+🧍‍♂️ pose_human
+https://opensource.org/licenses/MIT
 
-Light-weight repo for training and running YOLOv8 pose models on a small CVAT-exported dataset.
+A lightweight, clean, and reproducible repository for training and running YOLOv8 pose estimation models on a small CVAT‑exported dataset.
+Includes label conversion utilities, training/inference scripts, and workspace‑ready prediction outputs.
 
-Quick start
-
-- Create and activate a virtual environment and install dependencies:
-
-```powershell
+🚀 Quick Start
+1. Create and activate a virtual environment, then install dependencies
+powershell:
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-```
-
-- Train the model:
-
-```powershell
+2. Train the model
+powershell:
 python train_pose.py
-```
-
-- Run inference with the latest weights:
-
-```powershell
+3. Run inference using the latest trained weights
+powershell:
 python test_pose.py
-```
-
-- Save annotated images and per-image keypoint CSVs:
-
-```powershell
+4. Save annotated images + per‑image keypoint CSVs
+powershell:
 python scripts\save_predictions_to_workspace.py
-```
+📁 Files & Folders Overview
+cocopose.yaml, data.yaml — dataset + model configuration (currently using 15 keypoints)
 
-Files and folders
+images/, labels/ — training and validation data
 
-- `cocopose.yaml`, `data.yaml` — dataset and model config (currently using 15 keypoints)
-- `images/`, `labels/` — training/validation data
-- `train_pose.py`, `test_pose.py` — training and inference entrypoints
-- `scripts/convert_labels_17_to_15.py` — utility used to convert 17→15 keypoints (backups saved as `.bak`)
-- `predictions/` — generated annotated images and per-image keypoint CSVs
+train_pose.py, test_pose.py — training and inference entrypoints
 
-Notes
+scripts/convert_labels_17_to_15.py — converts COCO 17‑keypoint labels → YOLO 15‑keypoint format (creates .bak backups)
 
-- Backups: converted label files keep a `.bak` copy of the original 17-keypoint labels.
-- To switch back to 17 keypoints, restore backups and set `kpt_shape: [17, 3]` in `data.yaml` and `cocopose.yaml`.
+predictions/ — annotated images and keypoint CSV outputs
 
-Where outputs are saved
+📝 Notes
+Backup handling:  
+When converting labels, the original 17‑keypoint files are preserved as .bak.
 
-- Training outputs (example path): `C:/Users/Swetha/runs/pose/pose_human_run*/weights/best.pt`
-- Predictions: `predictions/` in project root
+Switching back to 17 keypoints:  
+Restore the .bak files and update:kpt_shape: [17, 3]
+in both data.yaml and cocopose.yaml.
 
-Want help with branch protection or a longer README (badges, contributor guide)? Tell me which and I can set it up.
-
-**License**
-
-This project is provided under the MIT License — see `LICENSE` for details.
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+yaml
+kpt_shape: [17, 3]
+in both data.yaml and cocopose.yaml.
