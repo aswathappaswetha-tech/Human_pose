@@ -1,5 +1,7 @@
 # pose_human
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Light-weight repo for training and running YOLOv8 pose models on a small CVAT-exported dataset.
 
 Quick start
@@ -48,5 +50,9 @@ Where outputs are saved
 - Training outputs (example path): `C:/Users/Swetha/runs/pose/pose_human_run*/weights/best.pt`
 - Predictions: `predictions/` in project root
 
-Want help with branch protection or a longer README (badges, license, contributor guide)? Tell me which and I can set it up.
+Want help with branch protection or a longer README (badges, contributor guide)? Tell me which and I can set it up.
+
+**License**
+
+This project is provided under the MIT License — see `LICENSE` for details.
 
