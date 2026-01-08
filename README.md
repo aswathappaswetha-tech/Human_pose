@@ -4,7 +4,32 @@
 
 Light-weight repo for training and running YOLOv8 pose models on a small CVAT-exported dataset.
 
-Quick start
+# 🧍‍♀️ Human Pose Estimation with YOLOv8
+
+This project uses YOLOv8 for full-body human pose estimation on custom images. It includes label conversion, keypoint plotting, and model training workflows.
+
+## 📁 Project Structure
+
+- `scripts/`: preprocessing and label conversion scripts  
+- `test_images/`: sample images for inference  
+- `labels/`: training and validation label files  
+- `train_pose.py`: training pipeline  
+- `test_pose.py`: inference and visualization  
+- `output_keypoints.png`: sample output  
+- `data.yaml`, `cocopose.yaml`: dataset configuration  
+
+## 🧠 Key Features
+
+- Converts COCO-style labels to YOLOv8 format  
+- Trains pose estimation model using Ultralytics YOLO  
+- Visualizes keypoints and saves predictions  
+- Supports `.jpg`, `.webp`, `.avif` test images  
+
+## 🛠️ Setup
+
+```bash
+pip install -r requirements.txt
+
 
 - Create and activate a virtual environment and install dependencies:
 
@@ -50,7 +75,6 @@ Where outputs are saved
 - Training outputs (example path): `C:/Users/Swetha/runs/pose/pose_human_run*/weights/best.pt`
 - Predictions: `predictions/` in project root
 
-Want help with branch protection or a longer README (badges, contributor guide)? Tell me which and I can set it up.
 
 **License**
 
